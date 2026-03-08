@@ -8,10 +8,11 @@ export const metadata: Metadata = {
     "Camplytic: Manage your Facebook marketing campaigns visually and with confidence.",
 };
 
+// Fixed route URLs: remove (dashboard) group from public paths
 const navItems = [
-  { label: "Overview", href: "/(dashboard)/dashboard/general" },
-  { label: "Campaigns", href: "/(dashboard)/dashboard/campaigns" },
-  { label: "Reports", href: "/(dashboard)/dashboard/reports" },
+  { label: "Overview", href: "/dashboard/general" },
+  { label: "Campaigns", href: "/dashboard/campaigns" },
+  { label: "Reports", href: "/dashboard/reports" },
 ];
 
 export default function DashboardLayout({
