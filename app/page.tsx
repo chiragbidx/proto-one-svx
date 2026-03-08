@@ -1,19 +1,20 @@
 // Server Component: keep layout/content server-rendered.
 // Client-only island (uses useState) is imported below; avoids marking this page "use client".
 import { AgentActionPanel } from "../components/AgentActionPanel";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-50 via-white to-[#ffe6d8] text-zinc-900">
       <main className="flex min-h-screen w-full flex-col gap-12 px-6 py-12 sm:px-10 lg:px-16 lg:max-w-[1600px] lg:mx-auto">
-        {/* Header: Panda wordmark and primary actions (docs/deploy); wraps on small screens */}
+        {/* Header: Camplytic wordmark and primary actions */}
         <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <div className="rounded-full border border-[#fb7232]/30 bg-white px-5 py-2 shadow-sm">
-              <span className="text-2xl font-black tracking-tight text-[#fb7232]">Panda</span>
+              <span className="text-2xl font-black tracking-tight text-[#fb7232]">Camplytic</span>
             </div>
             <p className="text-sm font-medium text-[#c75829] sm:text-base">
-              Lightweight SaaS starter ready to ship.
+              Next.js marketing campaigns dashboard starter.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 sm:justify-end w-full sm:w-auto">
@@ -29,6 +30,12 @@ export default function Home() {
             >
               Deploy
             </a>
+            <Link
+              href="/(dashboard)/dashboard"
+              className="w-full sm:w-auto text-center rounded-full border border-[#fb7232]/30 bg-white px-4 py-2 text-sm font-semibold text-[#fb7232] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+            >
+              Go to Dashboard
+            </Link>
           </div>
         </header>
 
@@ -36,13 +43,13 @@ export default function Home() {
         <section className="grid min-h-[520px] gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-6">
             <p className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#fb7232] shadow-sm">
-              Simple Panda Stack
+              Facebook Campaigns Made Simple
             </p>
             <h1 className="text-4xl font-black leading-tight text-[#3f1b08] sm:text-5xl">
-              Build and launch faster with a calm, opinionated starting point.
+              Manage and analyze your Facebook marketing campaigns in one place.
             </h1>
             <p className="max-w-3xl text-lg leading-7 text-zinc-700">
-              The Panda starter pairs clean defaults with sensible layout decisions so you can focus on product, not plumbing. Fully responsive, accessible, and easy to extend.
+              Camplytic provides a minimal yet powerful dashboard template to launch, track, and optimize your marketing efforts. Start today with a clean, production-grade base.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:flex-wrap sm:gap-4 w-full">
               <a
@@ -57,6 +64,12 @@ export default function Home() {
               >
                 See how it works
               </a>
+              <Link
+                href="/(dashboard)/dashboard"
+                className="inline-flex w-full sm:w-auto items-center justify-center rounded-lg border border-[#fb7232]/30 bg-white px-5 py-3 text-sm font-semibold text-[#fb7232] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                Go to Dashboard
+              </Link>
             </div>
           </div>
 
@@ -64,23 +77,23 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#ffe7dd] via-white to-[#ffd9c6] opacity-70" aria-hidden />
             <div className="relative grid gap-4 p-6 sm:grid-cols-2">
               <div className="rounded-xl bg-white/80 p-4 shadow-sm ring-1 ring-[#fb7232]/20">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#fb7232]">Launch</p>
-                <p className="mt-2 text-base font-semibold text-[#4b1f0a]">Zero-fuss deploys</p>
-                <p className="text-sm text-zinc-600">Prewired for Vercel with environment helpers and sane defaults.</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#fb7232]">Dashboard</p>
+                <p className="mt-2 text-base font-semibold text-[#4b1f0a]">All-in-one Facebook Campaigns</p>
+                <p className="text-sm text-zinc-600">Visualize, manage, and optimize performance in a single, easy dashboard.</p>
               </div>
               <div className="rounded-xl bg-white/80 p-4 shadow-sm ring-1 ring-[#fb7232]/20">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#fb7232]">Design</p>
-                <p className="mt-2 text-base font-semibold text-[#4b1f0a]">Responsive by default</p>
-                <p className="text-sm text-zinc-600">Layout stretches the full viewport while keeping breathable spacing.</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#fb7232]">Brand</p>
+                <p className="mt-2 text-base font-semibold text-[#4b1f0a]">Camplytic Themed</p>
+                <p className="text-sm text-zinc-600">Fresh, orange-accented, mobile-friendly, and production-grade.</p>
               </div>
               <div className="rounded-xl bg-white/80 p-4 shadow-sm ring-1 ring-[#fb7232]/20">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#fb7232]">Code</p>
-                <p className="mt-2 text-base font-semibold text-[#4b1f0a]">Type-safe stack</p>
-                <p className="text-sm text-zinc-600">Next.js App Router, TypeScript, ESLint, and formatting baked in.</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#fb7232]">Stack</p>
+                <p className="mt-2 text-base font-semibold text-[#4b1f0a]">Minimal & Extensible</p>
+                <p className="text-sm text-zinc-600">Next.js App Router, TS, Drizzle/Postgres-ready. Clean code, easy to grow.</p>
               </div>
               <div className="rounded-xl bg-white/80 p-4 shadow-sm ring-1 ring-[#fb7232]/20">
                 <p className="text-xs font-semibold uppercase tracking-wide text-[#fb7232]">Speed</p>
-                <p className="mt-2 text-base font-semibold text-[#4b1f0a]">Ready in minutes</p>
+                <p className="mt-2 text-base font-semibold text-[#4b1f0a]">Ready in Minutes</p>
                 <p className="text-sm text-zinc-600">Opinionated setup trims decisions so you can ship faster.</p>
               </div>
             </div>
@@ -110,10 +123,10 @@ export default function Home() {
         >
           <div className="grid gap-10 sm:grid-cols-[1.2fr_1fr] sm:items-center">
             <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#fb7232]">Panda starter</p>
-              <h2 className="text-3xl font-bold leading-tight sm:text-4xl">Stay lightweight. Launch confidently.</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#fb7232]">Camplytic</p>
+              <h2 className="text-3xl font-bold leading-tight sm:text-4xl">Ship your next marketing campaign faster.</h2>
               <p className="text-base text-[#6a3515]">
-                A calm base with generous spacing, clear typography, and production-friendly defaults so you can focus on your product.
+                A clean dashboard starter for managing Facebook campaigns. Modern, flexible, and ready to scale with your product.
               </p>
             </div>
 
@@ -138,14 +151,16 @@ export default function Home() {
                 <a className="block text-[#5a2a12] transition hover:text-[#fb7232]" href="https://github.com/">
                   GitHub
                 </a>
-                <a className="block text-[#5a2a12] transition hover:text-[#fb7232]" href="mailto:hello@example.com">
+                <a className="block text-[#5a2a12] transition hover:text-[#fb7232]" href="mailto:chirag@bidx.ai">
                   Support
                 </a>
               </div>
             </div>
           </div>
           <div className="mt-10 flex justify-center border-t border-[#fb7232]/15 pt-6 text-center text-xs text-[#6a3515]">
-            <span>Built with the Panda starter • MIT licensed • Ready for your next launch</span>
+            <span>
+              Built with Camplytic • MIT licensed • Owner: Chirag Dodiya • chirag@bidx.ai
+            </span>
           </div>
         </section>
       </main>
