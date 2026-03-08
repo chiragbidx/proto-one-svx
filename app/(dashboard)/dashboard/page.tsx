@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
-// Simple redirect to general/overview dashboard
+// Redirect to general dashboard (public URL, omitting (dashboard) group)
 export default function DashboardRootPage() {
-  redirect("/(dashboard)/dashboard/general");
+  redirect("/dashboard/general");
   return null;
 }
