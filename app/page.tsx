@@ -31,7 +31,7 @@ export default function Home() {
               Deploy
             </a>
             <Link
-              href="/(dashboard)/dashboard"
+              href="/dashboard"
               className="w-full sm:w-auto text-center rounded-full border border-[#fb7232]/30 bg-white px-4 py-2 text-sm font-semibold text-[#fb7232] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
             >
               Go to Dashboard
@@ -65,7 +65,7 @@ export default function Home() {
                 See how it works
               </a>
               <Link
-                href="/(dashboard)/dashboard"
+                href="/dashboard"
                 className="inline-flex w-full sm:w-auto items-center justify-center rounded-lg border border-[#fb7232]/30 bg-white px-5 py-3 text-sm font-semibold text-[#fb7232] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
               >
                 Go to Dashboard
